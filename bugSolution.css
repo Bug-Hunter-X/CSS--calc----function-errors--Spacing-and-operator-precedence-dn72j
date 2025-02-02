@@ -1,0 +1,18 @@
+/* Correct usage of calc() */
+#element {
+  width: calc(100% - 10px);
+  /* Correct spacing */
+  height: calc(50% + 20px); /* Correct spacing */
+  margin: calc((100vw - 800px) / 2);
+  /* Correct Operator precedence with parenthesis */
+}
+
+/* Incorrect Usage */
+/* Extra space between operator and operand */
+#incorrectElement {
+  width: calc(100% - 10px); /*Correct*/
+  width: calc(100%- 10px);/*Incorrect*/
+  /* Incorrect operator precedence */
+  height: calc(20px + 10px * 2); /*Result 40px*/
+  height: calc((20px + 10px) * 2); /*Result 60px*/
+}
